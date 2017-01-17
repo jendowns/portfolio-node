@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "3.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.2",
+    "contentful": "^3.8.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.3.3",
+    "dotenv": "^4.0.0",
+    "express": "~4.14.0",
+    "marked": "^0.3.6",
+    "morgan": "~1.7.0",
+    "node-sass-middleware": "~0.10.0",
+    "pug": "^2.0.0-beta6",
+    "serve-favicon": "~2.3.0"
+  },
+  "engines": {
+    "node": "6.9.1",
+    "npm": "3.10.8"
+  }
+}

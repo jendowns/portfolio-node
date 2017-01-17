@@ -1,0 +1,103 @@
+extends layout.pug
+
+block content
+	header
+		.container
+			h1 Jen Downs
+			h2 Front-end developer
+			ul
+				li
+					a(href='https://www.twitter.com/jenisora', target='_blank', title='Twitter')
+						i.icon.icon-twitter(aria-hidden="true") 
+						span.screen-reader Twitter
+				li    
+					a(href='https://www.codepen.io/jendowns', target='_blank', title='Codepen')
+						i.icon.icon-codepen(aria-hidden="true") 
+						span.screen-reader Codepen
+				li    
+					a(href='https://www.github.com/jendowns', target='_blank', title='GitHub')
+						i.icon.icon-github(aria-hidden="true") 
+						span.screen-reader GitHub
+
+	section#posts
+		.container
+			.flex-grid
+				each post in blogEntries
+					article
+						a(href=post.fields.slug)
+							h3 #{post.fields.title}
+						p 
+							small  #{post.fields.datePublished}
+						| !{post.fields.excerpt}
+						p
+							a(href=post.fields.slug) Read More
+
+				article
+					a(href='/wordpress-sidebar', target='_blank')
+						h3 Creating a Sidebar of Categories and Posts in WordPress
+					p
+						small Posted on October 20, 2016
+					p I wrote about using PHP to generate a side navigation menu, with categories as dropdown triggers and posts as dropdown list items.
+					p
+						a(href='/wordpress-sidebar', target='_blank') 
+							| Read More &nbsp;
+							i.icon.icon-open(aria-hidden="true") 
+				article
+					a(href='/unity-arcade-game', target='_blank')
+						h3 2D Arcade Game in JavaScript with Unity 5
+					p
+						small Posted on April 1, 2016
+					p 
+						| Using the Unity 5 engine, I made a 2D arcade game. And it's written in JavaScript! (Well, Unity's flavor of JavaScript.) I wrote an article for 
+						a.text-link(href="https://recompilermag.com/", target="_blank") The Recompiler  
+						| about how I made this game.
+					p
+						a(href='/unity-arcade-game', target='_blank') 
+							| Read More &nbsp;
+							i.icon.icon-open(aria-hidden="true") 
+
+	section#project
+		.container
+			each project in projectEntries
+				.flex-grid
+					.project__info
+						h3 #{project.fields.projectTitle}
+						| !{project.fields.projectInfo}
+					.project__window
+						.window__wrapper
+							.window__toolbar
+								.window__button
+								.window__button
+								.window__button
+							img(src=project.fields.projectPreview.fields.file.url, alt=project.fields.projectTitle)
+
+	footer
+		.container
+			.flex-grid
+				ul
+					li
+						small &copy; 2017 Jen Downs. 
+					li
+						small Made with 
+							i.icon.icon-heart
+							span.screen-reader love 
+							|  in Austin, TX.
+				ul
+					li
+						a(href='https://www.twitter.com/jenisora', target='_blank', title='Twitter')
+							i.icon.icon-twitter(aria-hidden="true") 
+							span.screen-reader Twitter
+					li    
+						a(href='https://www.codepen.io/jendowns', target='_blank', title='Codepen')
+							i.icon.icon-codepen(aria-hidden="true") 
+							span.screen-reader Codepen
+					li    
+						a(href='https://www.github.com/jendowns', target='_blank', title='GitHub')
+							i.icon.icon-github(aria-hidden="true") 
+							span.screen-reader GitHub
+
+	script(type='text/javascript').
+		console.log("( ^ o ^ )/");
+
+
+	

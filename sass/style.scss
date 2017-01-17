@@ -1,0 +1,562 @@
+
+@import 'reset.scss';
+@import 'icomoon.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'highlight.scss';
+
+
+/* -------------------------
+	Generic Styles
+----------------------------*/
+
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+}
+
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	font-size: 10px; // baseline
+}
+
+body {
+	background-color: #fff;
+}
+
+body, section, div, p, li, a, span {
+	@include calc-font-flow(16);
+	font-family: $font--body;
+	color: darken($toolbar--gray, 50%);
+}
+
+section, header {
+	padding-top: $--baseline * 2 + px;
+	padding-bottom: $--baseline * 2 + px;
+	padding-left: 0;
+	padding-right: 0;
+	display: block;
+}
+
+footer {
+	padding: $--baseline * 2 + px;
+}
+
+p {
+	margin-bottom: $--baseline + px;
+	text-align: left;
+}
+
+h1, h2, h3, h4 {
+	font-family: $font--heading;
+	margin-top: 0;
+	margin-bottom: $--baseline + px;
+}
+
+h1 {
+	font-size: 64px;
+	line-height: 64px;
+	line-height: 9rem;
+	font-family: $font--title;
+	font-weight: 900;
+}
+
+h2 {
+	font-size: 32px;
+	line-height: 32px;
+	font-weight: 700;
+}
+
+h3 {
+	@include calc-font-flow(18);
+	font-weight: 900;
+	color: darken($toolbar--gray, 60%);
+}
+
+a {
+	color: $purple;
+	font-weight: 700;
+	font-family: $font--body;
+	text-decoration: none;
+	font-size: inherit;
+	line-height: inherit;
+	@include transition(all, 200ms);
+
+	&:hover, &:focus {
+		color: darken($purple, 10%);
+		text-decoration: none;
+		border-bottom: 2px solid darken($purple, 10%);
+	}
+}
+
+small, small a {
+	@include calc-font-flow(14);
+	line-height: inherit;
+}
+
+strong {
+	font-weight: 700;
+}
+
+em {
+	font-style: italic;
+	font-family: $font--heading;
+}
+
+
+
+/* -------------------------
+	Utility Classes
+----------------------------*/
+
+.screen-reader {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
+}
+
+.center {
+	@include center-element;
+}
+
+.center-vertically {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.pull-right {
+	float: right;
+}
+
+.container {
+	width: 90%;
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: $--baseline + px 0;
+
+	&:after {
+		clear: both;
+	}
+}
+
+.flex-grid {
+	width: 100%;
+	max-width: 1280px;
+	margin: ($--baseline + px) 0px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+
+/* ------------------------
+	HEADER (HOME)
+--------------------------*/
+
+header {
+	background-color: $purple;
+
+	h1, h2 {
+		color: #fff;
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+		text-align: left;
+		display: inline-block;
+		margin-top: $--baseline + px;
+	}
+
+	li {
+		display: inline-block;
+		padding: ($--baseline / 2 + px) ($--baseline / 2 + px);
+
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+
+	li a {
+		color: #fff;
+		@include calc-font-flow(24);
+
+		&:hover, &:focus {
+			color: darken($purple, 30%);
+			border: 0;
+		}
+	}
+}
+
+/* ------------------------
+	POSTS
+--------------------------*/
+
+#posts {
+	background-color: lighten($toolbar--gray, 10%);
+}
+
+article {
+	width: calc(33.33333% - 8px);
+	background-color: #fff;
+	margin: 0px 0px ($--baseline + px) 0px;
+	border: 1px solid $toolbar--gray;
+	padding: $--baseline + px;
+	@include border-radius(6);
+
+	h3 {
+		margin-bottom: 0;
+	}
+
+	small {
+		@include calc-font-flow(12);
+		text-transform: uppercase;
+		color: darken($toolbar--gray, 40%);
+	}
+
+	p {
+		@include calc-font-flow(14);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+/* ------------------------
+	PROJECTS
+--------------------------*/
+
+#project {
+
+	.container {
+		max-width: 960px;
+	}
+
+	h3 {
+		@include calc-font-flow(28);
+		font-weight: 700;
+		color: darken($purple, 30%);
+	}
+
+	p {
+		@include calc-font-flow(18);
+	}
+}
+
+.flex-grid {
+	margin: ($--baseline * 2 + px) 0;
+
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.project__info {
+	width: 50%;
+	padding-right: ($--baseline * 2) + px;
+}
+
+.project__window {
+	width: 50%;
+	max-width: 450px;
+}
+.window__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	overflow: hidden;
+	box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+	@include border-radius(6);
+	border: 1px solid darken($toolbar--gray, 5%);
+
+	img {
+		width: 100%;
+		height: auto;
+		flex-shrink: 0; // for IE :)
+	}
+}
+.window__toolbar {
+	height: 36px;
+	background-color: $toolbar--gray;
+	display: flex;
+	flex-wrap: no-wrap;
+	flex-direction: row;
+	justify-content: left;
+	border-bottom: 1px solid darken($toolbar--gray, 5%);
+}
+.window__button {
+	height: 12px;
+	width: 12px;
+	border-radius: 100%;
+	margin: 12px 4px;
+	
+	&:first-child {
+		margin-left: 12px;
+		background-color: $button--red;
+		border: 1px solid darken($button--red, 5%);
+	}
+	&:nth-child(2) {
+		background-color: $button--yellow;
+		border: 1px solid darken($button--yellow, 5%);
+	}
+	&:nth-child(3) {
+		background-color: $button--green;
+		border: 1px solid darken($button--green, 5%);
+	}
+}
+
+
+
+/* --------------------------
+	footer
+------------------------- */
+
+footer {
+	background-color: darken($purple, 30%);
+
+	small {
+		color: #fff;
+	}
+
+	ul {
+		width: 50%;
+		padding: 0;
+		margin: 0;
+		text-align: left;
+		display: inline-block;
+	}
+
+	ul:last-child {
+		text-align: right;
+
+		li {
+			display: inline-block;
+			padding: ($--baseline / 2 + px) ($--baseline + px);
+
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+	}
+
+	.flex-grid {
+		margin: 0;
+		justify-content: space-around;
+	}
+
+	a {
+		@include calc-font-flow(24);
+		color: #fff;
+
+		&:hover, &:focus {
+			border: 0;
+			color: $purple;
+		}
+	}
+}
+
+/* --------------------------
+	single post
+------------------------- */
+
+
+nav {
+	background-color: $purple;
+	padding: ($--baseline + px) ($--baseline * 2 + px);
+	height: auto;
+
+	.flex-grid {
+		margin: 0 auto;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		max-width: 960px;
+	}
+
+	a {
+		color: #fff;
+		@include calc-font-flow(20);
+	}
+
+	a:hover, a:focus {
+		color: darken($purple, 30%);
+		text-decoration: none;
+	}
+}
+
+.single {
+
+	ol {
+		list-style-type: decimal;
+		padding: 0 ($--baseline * 2 + px);
+
+		li {
+			padding-left: $--baseline / 2 + px;
+			margin: ($--baseline + px) 0;
+		}
+	}
+
+	p, span {
+		@include calc-font-flow(16);
+	}
+
+	h1 {
+		font-size: 48px;
+		font-size: 4.8rem;
+		line-height: 56px;
+		line-height: 5.6rem;
+		color: darken($purple, 30%);
+	}
+
+	h2 {
+		margin: ($--baseline * 2 + px) 0 ($--baseline + px) 0;
+	}
+	.date {
+		@include calc-font-flow(14);
+		text-transform: uppercase;
+		text-align: right;
+		color: darken($toolbar--gray, 20%);
+		font-weight: 700;
+	}
+	.container {
+		max-width: 960px;
+		@include border-radius(6);
+		padding: $--baseline * 2 + px;
+	}
+
+	img:not(.pull-right) {
+		border: 1px solid $toolbar--gray;
+		@include border-radius(6);
+		width: 90%;
+		max-width: 600px;
+	}
+
+	code {
+		@include border-radius(6);
+	}
+}
+
+
+/* --------------------------
+		8. Mobile Styles
+------------------------- */
+
+@media (max-width: 960px) {
+
+	article {
+		width: calc(50% - 8px);
+	}
+}
+
+@media (max-width: 768px) {
+
+	.tinted-image {
+		margin: 0 auto;
+		height: 125px !important;
+		width: 125px !important;
+		border-radius: 125px !important;
+		background-size: 125px 125px !important;
+
+		&.pull-right {
+			float: right;
+		}
+	}
+
+	.hidden--medium {
+		display: none;
+		visibility: hidden;
+		width: 0px;
+		height: 0px;
+		overflow: hidden;
+		clip: rect(0,0,0,0);
+		border: 0;
+	}
+
+	.single .container {
+		padding: 0;
+	}
+}
+
+
+@media (max-width: 576px) {
+
+	.hidden--mobile {
+		display: none;
+		visibility: hidden;
+		width: 0px;
+		height: 0px;
+		overflow: hidden;
+		clip: rect(0,0,0,0);
+		border: 0;
+	}
+
+	body, span, p, div {
+		@include calc-font-flow(16);
+	}
+
+	h1 {
+		font-size: 60px;
+		line-height: 60px;
+		line-height: 6rem;
+	}
+
+	h2 {
+		@include calc-font-flow(30);
+	}
+
+	h3, #project h3 {
+		@include calc-font-flow(20);
+	}
+
+	article {
+		width: calc(100% - 8px);
+	}
+
+	.flex-grid {
+		display: block;
+	}
+
+	.project__window, .project__info, footer ul {
+		width: 98%;
+	}
+
+	.project__info {
+		padding-right: 0;
+
+		p {
+			@include calc-font-flow(14);
+		}
+	}
+
+	footer ul:last-child {
+		text-align: left;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+

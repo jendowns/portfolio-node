@@ -1,0 +1,78 @@
+
+/* -----------------------------------------
+	MIXINS:
+	1. Set Box-Sizing
+	2. Set Border-Radius
+	3. Calculate Font-Size & Line-Height
+	4. Center Element
+	5. Animate (w/ vendor prefixes)
+	6. Transform (w/ vendor prefixes)
+	7. Transition (w/ vendor prefixes)
+----------------------------------------- */
+
+// Baselines to help with vertical flow
+$--baseline: 16;
+$--increment: 1.6;
+
+// 1. Set Box-Sizing
+@mixin box-sizing($model) {
+	-webkit-box-sizing: $model;
+	-moz-box-sizing: $model;
+	box-sizing: $model;
+}
+
+// 2. Set Border-Radius
+@mixin border-radius($radius) {
+	@if $radius == 100% {
+		-webkit-border-radius: $radius;
+		-moz-border-radius: $radius;
+		-ms-border-radius: $radius;
+		border-radius: $radius;
+	}
+	@else {
+		-webkit-border-radius: $radius + px;
+		-moz-border-radius: $radius + px;
+		-ms-border-radius: $radius + px;
+		border-radius: $radius + px;
+	}
+}
+
+// 3. Calculate Font-Size & Line-Height
+@mixin calc-font-flow($size) {
+	font-size: $size + px;
+	font-size: $size / $--baseline * $--increment + rem;
+	line-height: $size * $--increment + px;
+	line-height: $size / $--baseline * $--increment * $--increment + rem;
+}
+
+// 4. Center Element (note: this could be a placeholder instead)
+@mixin center-element {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+// 5. Animate (note: duration must include unit)
+@mixin animate($name, $duration, $easing, $loop) {
+	-moz-animation: $name $duration $easing $loop;
+	-ms-animation: $name $duration $easing $loop;
+	-o-animation: $name $duration $easing $loop;
+	-webkit-animation: $name $duration $easing $loop;
+	animation: twinkle $name $duration $easing $loop;
+}
+
+// 6. Transform
+@mixin transform($transform) {
+	-webkit-transform: $transform;
+	-ms-transform: $transform;
+	transform: $transform;
+}
+
+// 7. Transition (note: duration must include unit)
+@mixin transition($target, $duration){
+	-webkit-transition: $target $duration;
+	-moz-transition: $target $duration;
+	-o-transition: $target $duration;
+	transition: $target $duration;
+}

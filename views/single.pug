@@ -1,0 +1,47 @@
+extends layout.pug
+
+block content
+	nav
+		.flex-grid
+			ul
+				li 
+					a(href='/', title='Back Home')
+						i.icon.icon-arrow-left(aria-hidden="true") 
+						|  Back
+
+	section.single
+		.container
+			p.date #{date}
+			h1 #{title}
+			| !{body}
+
+	footer
+		.container
+			.flex-grid
+				ul
+					li
+						small &copy; 2017 Jen Downs. 
+					li
+						small Made with 
+							i.icon.icon-heart
+							span.screen-reader love 
+							|  in Austin, TX.
+				ul
+					li
+						a(href='https://www.twitter.com/jenisora', target='_blank', title='Twitter')
+							i.icon.icon-twitter(aria-hidden="true") 
+							span.screen-reader Twitter
+					li    
+						a(href='https://www.codepen.io/jendowns', target='_blank', title='Codepen')
+							i.icon.icon-codepen(aria-hidden="true") 
+							span.screen-reader Codepen
+					li    
+						a(href='https://www.github.com/jendowns', target='_blank', title='GitHub')
+							i.icon.icon-github(aria-hidden="true") 
+							span.screen-reader GitHub
+
+	script(type='text/javascript', src='js/highlight.pack.js')
+	script(type='text/javascript').
+		console.log("( ^ o ^ )/");
+		hljs.initHighlightingOnLoad();
+

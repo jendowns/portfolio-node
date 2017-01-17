@@ -1,0 +1,7 @@
+node_modules
+public/.DS_Store
+routes/.DS_Store
+views/.DS_Store
+.DS_Store
+bin/
+.env
