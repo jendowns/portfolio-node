@@ -8,6 +8,8 @@ var bodyParser = require('body-parser');
 var app = express();
 var sassMiddleware = require('node-sass-middleware');
 
+var port = process.env.PORT || 3000;
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -77,6 +79,6 @@ app.use(function(err, req, res, next) {
   res.render('error', body);
 });
 
-app.listen(3000, function () {
-  console.log('App listening on port 3000!')
+app.listen(port, function () {
+  console.log('App listening on port ' + port)
 });
