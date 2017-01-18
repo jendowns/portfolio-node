@@ -213,7 +213,7 @@ p {
   margin-bottom: 16px;
   text-align: left; }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
   font-family: "Lato", Helvetica, Arial, Verdana, sans-serif;
   margin-top: 0;
   margin-bottom: 16px; }
@@ -373,20 +373,45 @@ article {
       margin-bottom: 0; }
 
 /* ------------------------
-	PROJECTS
+	PROJECTS & ABOUT
 --------------------------*/
-#project .container {
-  max-width: 960px; }
+#about {
+  background-color: #8971d0; }
+  #about h3, #about p {
+    color: #fff; }
+  #about .button {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    border-radius: 6px;
+    background-color: transparent;
+    padding: 16px 32px;
+    margin: 16px 0;
+    display: inline-block;
+    border: 2px solid #fff;
+    color: #fff; }
+    #about .button:focus, #about .button:hover {
+      background-color: #3f2a7e;
+      border: 2px solid #3f2a7e; }
+    #about .button i {
+      padding-left: 5px; }
+  #about h3 {
+    font-weight: 900; }
 
 #project h3 {
-  font-size: 28px;
-  font-size: 2.8rem;
-  line-height: 44.8px;
-  line-height: 4.48rem;
   font-weight: 700;
   color: #3f2a7e; }
 
-#project p {
+#project .container, #about .container {
+  max-width: 960px; }
+
+#project h3, #about h3 {
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 38.4px;
+  line-height: 3.84rem; }
+
+#project p, #about p {
   font-size: 18px;
   font-size: 1.8rem;
   line-height: 28.8px;
@@ -554,7 +579,9 @@ nav {
   -ms-border-radius: 6px;
   border-radius: 6px;
   width: 90%;
-  max-width: 600px; }
+  max-width: 600px;
+  display: block;
+  margin: 0 auto; }
 
 .single code {
   -webkit-border-radius: 6px;

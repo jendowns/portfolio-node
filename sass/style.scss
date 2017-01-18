@@ -50,7 +50,7 @@ p {
 	text-align: left;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
 	font-family: $font--heading;
 	margin-top: 0;
 	margin-bottom: $--baseline + px;
@@ -234,19 +234,53 @@ article {
 
 
 /* ------------------------
-	PROJECTS
+	PROJECTS & ABOUT
 --------------------------*/
 
-#project {
+#about {
+	background-color: $purple;
+
+	h3, p {
+		color: #fff;
+	}
+
+	.button {
+		@include border-radius(6);
+		background-color: transparent;
+		padding: ($--baseline + px) ($--baseline * 2 + px);
+		margin: ($--baseline + px) 0;
+		display: inline-block;
+		border: 2px solid #fff;
+		color: #fff;
+
+		&:focus, &:hover {
+			background-color: darken($purple, 30%);
+			border: 2px solid darken($purple, 30%);
+		}
+
+		i {
+			padding-left: 5px;
+		}
+	}
+
+	h3 {
+		font-weight: 900;
+	}
+}
+
+#project h3 {
+	font-weight: 700;
+	color: darken($purple, 30%);
+}
+
+#project, #about {
 
 	.container {
 		max-width: 960px;
 	}
 
 	h3 {
-		@include calc-font-flow(28);
-		font-weight: 700;
-		color: darken($purple, 30%);
+		@include calc-font-flow(24);
 	}
 
 	p {
@@ -446,6 +480,8 @@ nav {
 		@include border-radius(6);
 		width: 90%;
 		max-width: 600px;
+		display: block;
+		margin: 0 auto;
 	}
 
 	code {
