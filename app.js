@@ -26,6 +26,7 @@ app.use(sassMiddleware({
   dest: __dirname + '/public/stylesheets',
   prefix:  '/stylesheets',
   debug: true,  
+  outputStyle: 'compressed'
 }));
 
 
