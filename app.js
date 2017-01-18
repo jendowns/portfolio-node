@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var compression = require('compression');
 
 var app = express();
 var sassMiddleware = require('node-sass-middleware');
@@ -26,6 +27,10 @@ app.use(sassMiddleware({
   prefix:  '/stylesheets',
   debug: true,  
 }));
+
+
+app.use(compression());
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', require('./routes/index'));
