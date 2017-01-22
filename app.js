@@ -11,8 +11,6 @@ var sassMiddleware = require('node-sass-middleware');
 
 var port = process.env.PORT || 3000;
 
-
-// view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
@@ -28,7 +26,6 @@ app.use(sassMiddleware({
   debug: true,  
   outputStyle: 'compressed'
 }));
-
 
 app.use(compression());
 
