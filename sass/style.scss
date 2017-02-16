@@ -139,7 +139,7 @@ em {
 
 .container {
 	width: 90%;
-	max-width: 1280px;
+	max-width: 960px;
 	margin: 0 auto;
 	padding: $--baseline + px 0;
 
@@ -203,6 +203,10 @@ header {
 
 #posts {
 	background-color: lighten($toolbar--gray, 10%);
+
+	.container {
+		max-width: 1280px;
+	}
 }
 
 article {
@@ -274,10 +278,6 @@ article {
 }
 
 #project, #about {
-
-	.container {
-		max-width: 960px;
-	}
 
 	h3 {
 		@include calc-font-flow(24);
@@ -573,12 +573,12 @@ nav {
 		width: 98%;
 	}
 
-	#project {
+	.project__info {
 		padding-right: 0;
+	}
 
-		p {
-			@include calc-font-flow(14);
-		}
+	#project p, #about p {
+		@include calc-font-flow(15);
 	}
 
 	footer ul:last-child {
