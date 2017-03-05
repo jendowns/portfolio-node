@@ -20,16 +20,16 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(sassMiddleware({
-  src: __dirname + '/sass', 
+  src: __dirname + '/sass',
   dest: __dirname + '/public/stylesheets',
   prefix:  '/stylesheets',
-  debug: true,  
+  debug: true,
   outputStyle: 'compressed'
 }));
 
 app.use(compression());
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), { maxage: '7d' }));
 
 app.use('/', require('./routes/index'));
 
@@ -72,7 +72,7 @@ app.use(function(err, req, res, next) {
     res.render('404');
     return;
   }
-  
+
   // development error handler will print stacktrace,
   // production error handler no stacktraces leaked to user
   var body = {
