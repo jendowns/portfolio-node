@@ -8,57 +8,20 @@ block content
 			ul
 				li
 					a(href='https://www.twitter.com/jenisora', target='_blank', title='Twitter')
-						i.icon.icon-twitter(aria-hidden="true") 
+						i.icon.icon-twitter(aria-hidden="true")
 						span.screen-reader jenisora on Twitter
-				li    
+				li
 					a(href='https://www.codepen.io/jendowns', target='_blank', title='Codepen')
-						i.icon.icon-codepen(aria-hidden="true") 
+						i.icon.icon-codepen(aria-hidden="true")
 						span.screen-reader jendowns on Codepen
-				li    
+				li
 					a(href='https://www.github.com/jendowns', target='_blank', title='GitHub')
-						i.icon.icon-github(aria-hidden="true") 
+						i.icon.icon-github(aria-hidden="true")
 						span.screen-reader jendowns on GitHub
-				li    
+				li
 					a(href='https://keybase.io/jeni', target='_blank', title='Keybase.io')
-						i.icon.icon-key(aria-hidden="true") 
+						i.icon.icon-key(aria-hidden="true")
 						span.screen-reader jeni on Keybase.io
-
-	section#posts
-		.container
-			.flex-grid
-				each post in blogEntries
-					article
-						a(href=post.fields.slug)
-							h3 #{post.fields.title}
-						p 
-							small  #{post.fields.datePublished}
-						| !{post.fields.excerpt}
-						p
-							a(href=post.fields.slug) Read More
-
-				article
-					a(href='/wordpress-sidebar', target='_blank')
-						h3 Creating a Sidebar of Categories and Posts in WordPress
-					p
-						small October 20, 2016
-					p I wrote about using PHP to generate a side navigation menu, with categories as dropdown triggers and posts as dropdown list items.
-					p
-						a(href='/wordpress-sidebar', target='_blank') 
-							| Read More &nbsp;
-							i.icon.icon-open(aria-hidden="true") 
-				article
-					a(href='/unity-arcade-game', target='_blank')
-						h3 2D Arcade Game in JavaScript with Unity 5
-					p
-						small April 1, 2016
-					p 
-						| Using the Unity 5 engine, I made a 2D arcade game. And it's written in JavaScript! (Well, Unity's flavor of JavaScript.) I wrote an article for 
-						a.text-link(href="https://recompilermag.com/", target="_blank") The Recompiler  
-						| about how I made this game.
-					p
-						a(href='/unity-arcade-game', target='_blank') 
-							| Read More &nbsp;
-							i.icon.icon-open(aria-hidden="true") 
 
 	section#project
 		.container
@@ -74,10 +37,47 @@ block content
 								.window__button
 								.window__button
 							img(src=project.fields.projectPreview.fields.file.url, alt="Screenshot of the project website.")
+								
+	section#posts
+		.container
+			.flex-grid
+				each post in blogEntries
+					article
+						a(href=post.fields.slug)
+							h3 #{post.fields.title}
+						p
+							small  #{post.fields.datePublished}
+						| !{post.fields.excerpt}
+						p
+							a(href=post.fields.slug) Read More
+
+				article
+					a(href='/wordpress-sidebar', target='_blank')
+						h3 Creating a Sidebar of Categories and Posts in WordPress
+					p
+						small October 20, 2016
+					p I wrote about using PHP to generate a side navigation menu, with categories as dropdown triggers and posts as dropdown list items.
+					p
+						a(href='/wordpress-sidebar', target='_blank')
+							| Read More &nbsp;
+							i.icon.icon-open(aria-hidden="true")
+				article
+					a(href='/unity-arcade-game', target='_blank')
+						h3 2D Arcade Game in JavaScript with Unity 5
+					p
+						small April 1, 2016
+					p
+						| Using the Unity 5 engine, I made a 2D arcade game. And it's written in JavaScript! (Well, Unity's flavor of JavaScript.) I wrote an article for
+						a.text-link(href="https://recompilermag.com/", target="_blank") The Recompiler
+						| about how I made this game.
+					p
+						a(href='/unity-arcade-game', target='_blank')
+							| Read More &nbsp;
+							i.icon.icon-open(aria-hidden="true")
 
 	section#about
 		.container
-			h3 About this site 
+			h3 About this site
 			p I built this site using <strong>Node.js + Express</strong> with <strong>SCSS</strong> &amp; <strong>Pug</strong> templating language, and I'm using <strong>Contentful's RESTful JSON API</strong> to deliver my blog posts and project previews. Originally, I used WordPress as a CMS for this site, but I decided to refactor with a headless CMS solution because it's so flexible.
 			p <a class="button" href="https://github.com/jendowns/portfolio-node" target="_blank">View Code on Github <i class="icon-github" aria-hidden="true"></i></a>
 
@@ -87,32 +87,29 @@ block content
 			.flex-grid
 				ul
 					li
-						small &copy; 2017 Jen Downs. 
+						small &copy; 2017 Jen Downs.
 					li
-						small Made with 
+						small Made with
 							i.icon.icon-heart
-							span.screen-reader love 
+							span.screen-reader love
 							|  in Austin, TX.
 				ul
 					li
 						a(href='https://www.twitter.com/jenisora', target='_blank', title='Twitter')
-							i.icon.icon-twitter(aria-hidden="true") 
+							i.icon.icon-twitter(aria-hidden="true")
 							span.screen-reader Twitter
-					li    
+					li
 						a(href='https://www.codepen.io/jendowns', target='_blank', title='Codepen')
-							i.icon.icon-codepen(aria-hidden="true") 
+							i.icon.icon-codepen(aria-hidden="true")
 							span.screen-reader Codepen
-					li    
+					li
 						a(href='https://www.github.com/jendowns', target='_blank', title='GitHub')
-							i.icon.icon-github(aria-hidden="true") 
+							i.icon.icon-github(aria-hidden="true")
 							span.screen-reader GitHub
 					li
 						a(href='https://keybase.io/jeni', target='_blank', title='Keybase.io')
-							i.icon.icon-key(aria-hidden="true") 
+							i.icon.icon-key(aria-hidden="true")
 							span.screen-reader jeni on Keybase.io
 
 	script(type='text/javascript').
 		console.log("✨ Hello there! ✨");
-
-
-	

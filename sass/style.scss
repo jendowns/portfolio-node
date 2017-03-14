@@ -139,7 +139,7 @@ em {
 
 .container {
 	width: 90%;
-	max-width: 960px;
+	max-width: 1024px;
 	margin: 0 auto;
 	padding: $--baseline + px 0;
 
@@ -150,7 +150,6 @@ em {
 
 .flex-grid {
 	width: 100%;
-	max-width: 1280px;
 	margin: ($--baseline + px) 0px;
 	display: flex;
 	justify-content: space-between;
@@ -203,10 +202,6 @@ header {
 
 #posts {
 	background-color: lighten($toolbar--gray, 10%);
-
-	.container {
-		max-width: 1280px;
-	}
 }
 
 article {
