@@ -4,12 +4,12 @@ var contentful = require('contentful');
 var marked = require('marked');
 require('dotenv').config();
 
-/* Redirects */
+/* Redirects for external articles */
 router.get('/wordpress-sidebar', function(req, res) {
 	res.redirect('http://wearemammoth.com/2016/10/wordpress-tutorial-generating-sidebar-categories-posts');
 });
 router.get('/unity-arcade-game', function(req, res) {
-	res.redirect('http://jendowns.com/unity-arcade-game');
+	res.redirect('https://recompilermag.com/issues/issue-3/creating-a-2d-arcade-game-with-javascript-in-unity-5/');
 });
 
 /* GET home page */
@@ -78,7 +78,7 @@ router.get('/:slug', function(req, res, next) {
 
 		var entry = entries.items[0];
 		var body = marked(entry.fields.body);
-		
+
 		var date = (entry.fields.datePublished).split('-');
 		var months = ['', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 		date = months[date[1]] + ' ' + date[2].replace(/(^|-)0+/g, "$1") + ', ' + date[0];
