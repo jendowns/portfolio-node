@@ -24,7 +24,8 @@ router.get('/', function(req, res, next) {
 
 	client.getEntries({
 		'content_type': 'blogPost',
-		'order': '-fields.datePublished'
+		'order': '-fields.datePublished',
+		'fields.slug[nin]': 'hire-me'
 	})
 	.then(function (blogEntries) {
 		if(blogEntries.items.length === 0)
