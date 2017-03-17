@@ -23,8 +23,9 @@ block content
 						i.icon.icon-key(aria-hidden="true")
 						span.screen-reader jeni on Keybase.io
 
-	section#project
+	section#projects
 		.container
+			h2 Projects
 			each project in projectEntries
 				.flex-grid
 					.project__info
@@ -40,6 +41,7 @@ block content
 
 	section#posts
 		.container
+			h2 Posts &amp; Tutorials
 			.flex-grid
 				each post in blogEntries
 					article
@@ -80,7 +82,7 @@ block content
 
 	section#about
 		.container
-			h3 About this site
+			h2 About this site
 			p I built this site using <strong>Node.js + Express</strong> with <strong>SCSS</strong> &amp; <strong>Pug</strong> templating language, and I'm using <strong>Contentful's RESTful JSON API</strong> to deliver my blog posts and project previews. Originally, I used WordPress as a CMS for this site, but I decided to refactor with a headless CMS solution because it's so flexible.
 			p <a class="button" href="https://github.com/jendowns/portfolio-node" target="_blank">View Code on Github <i class="icon-github" aria-hidden="true"></i></a>
 
