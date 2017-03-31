@@ -1,6 +1,18 @@
-extends layout
+extends layout.pug
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+	div(style="max-width: 450px; margin: 20px auto;")
+		.center
+			img(src="/images/pbg.gif", alt="Princess Bubblegum from the cartoon 'Adventure Time' flipping a table in anger.", width="375", style="padding: 16px 0;")
+		.center
+			h2.center Error! Something's gone wrong!
+			p.center Yikes! This wasn't supposed to happen.
+			p.center Let's get out of here...
+			p.center
+				a.text-link(href="/") 
+					i.icon.icon-arrow-left(aria-hidden="true", style="padding-right: 8px;")
+					| Return to the homepage
+  //- 
+    h1= message
+    h2= error.status
+    pre #{error.stack}

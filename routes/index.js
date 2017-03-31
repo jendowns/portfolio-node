@@ -15,7 +15,7 @@ router.get('/unity-arcade-game', function(req, res) {
 /* GET home page */
 router.get('/', function(req, res, next) {
 
-  	var client = contentful.createClient({
+  var client = contentful.createClient({
 		space: process.env.CF_SPACE,
 		accessToken: process.env.CF_ACCESS_TOKEN
 	});
