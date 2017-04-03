@@ -4,8 +4,8 @@ block content
 	header
 		.container
 			h1 Jen Downs
-			h2 code + design
-			ul
+			h2 Front end developer
+			ul.social-icons
 				li
 					a(href='https://twitter.com/jenisora', target='_blank', title='Twitter')
 						i.icon.icon-twitter(aria-hidden="true")
@@ -22,7 +22,14 @@ block content
 					a(href='https://keybase.io/jeni', target='_blank', title='Keybase.io')
 						i.icon.icon-key(aria-hidden="true")
 						span.screen-reader jeni on Keybase.io
-
+	section#me
+		.container
+			.flex-grid
+				.me__pic
+					img(src='/images/me.jpg', alt='A picture of Jen Downs.')
+				.me__desc.center-vertically
+					p Hey there, I'm Jen! 👋 I'm a front-end developer &amp; designer living in Austin, TX. I'm very passionate about learning new front-end technologies and using <a href="https://www.ibm.com/design/language/experience/front-end/fundamentals/">code as a design tool</a> to create compelling online experiences.
+					p You can <a href="https://twitter.com/jenisora">find me on Twitter</a>, where I mostly talk about my latest projects, my two awesome dogs, and video games. 🎮
 	section#projects
 		.container
 			h2 Projects
@@ -98,7 +105,7 @@ block content
 							i.icon.icon-heart
 							span.screen-reader love
 							| &nbsp;in Austin, TX.
-				ul
+				ul.social-icons
 					li
 						a(href='https://www.twitter.com/jenisora', target='_blank', title='Twitter')
 							i.icon.icon-twitter(aria-hidden="true")
