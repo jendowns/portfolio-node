@@ -42,7 +42,7 @@ section, header {
 }
 
 footer {
-	padding: $--baseline * 2 + px;
+	padding: $--baseline * 2 + px 0px;
 }
 
 p {
@@ -425,7 +425,7 @@ footer {
 
 	.flex-grid {
 		margin: 0;
-		justify-content: space-around;
+		justify-content: space-between;
 	}
 
 	a {
@@ -633,6 +633,7 @@ nav {
 	}
 
 	footer ul:last-child {
+    padding-top: $--baseline * 1.5 + px;
 		text-align: left;
 	}
 
