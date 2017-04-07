@@ -260,7 +260,9 @@ article {
       width: 100%;
       height: auto;
       display: block;
-      @include border-radius(6);
+      @include border-radius(100%);
+      border: 1px solid darken($toolbar--gray, 5%);
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
     }
   }
 
