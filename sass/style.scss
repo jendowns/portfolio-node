@@ -271,7 +271,7 @@ article {
   }
 
   p {
-    @include calc-font-flow(20);
+    @include calc-font-flow(18);
   }
 }
 
@@ -565,7 +565,7 @@ nav {
 	}
 
   #me .me__desc p {
-    @include calc-font-flow(18);
+    @include calc-font-flow(16);
   }
 }
 
