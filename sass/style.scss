@@ -33,16 +33,24 @@ body, section, div, p, li, a, span {
 	color: darken($toolbar--gray, 50%);
 }
 
-section, header {
-	padding-top: $--baseline * 2 + px;
-	padding-bottom: $--baseline * 2 + px;
+section {
+	padding-top: $--baseline * 4 + px;
+	padding-bottom: $--baseline * 4 + px;
+	padding-left: 0;
+	padding-right: 0;
+	display: block;
+}
+
+header {
+	padding-top: $--baseline * 5 + px;
+	padding-bottom: $--baseline * 5 + px;
 	padding-left: 0;
 	padding-right: 0;
 	display: block;
 }
 
 footer {
-	padding: $--baseline * 2 + px 0px;
+	padding: $--baseline * 4 + px 0px;
 }
 
 p {
@@ -57,22 +65,26 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size: 64px;
-	line-height: 64px;
+	font-size: 72px;
+	line-height: 75px;
 	line-height: 9rem;
 	font-family: $font--title;
-	font-weight: 900;
+	font-weight: 700;
+  text-align: center;
 }
 
 h2 {
-	font-size: 32px;
-	line-height: 32px;
+	font-size: 42px;
+	line-height: 45px;
 	font-weight: 700;
+  text-align: center;
+  padding-top: $--baseline * 2 + px;
+  padding-bottom: $--baseline + px;
 }
 
 h3 {
-	@include calc-font-flow(18);
-	font-weight: 900;
+	@include calc-font-flow(20);
+	font-weight: 700;
 }
 
 a {
@@ -173,6 +185,12 @@ header {
 		color: #fff;
 	}
 
+  h2 {
+    font-style: italic;
+    font-size: 34px;
+    line-height: 34px;
+  }
+
 	ul {
 		padding: 0;
 		margin: 0;
@@ -236,6 +254,10 @@ article {
 
 		&:last-child {
 			margin-bottom: 0;
+
+      a {
+        @include calc-font-flow(16);
+      }
 		}
 	}
 }
@@ -247,8 +269,13 @@ article {
 #me {
   background-color: lighten($toolbar--gray, 8%);
 
+  .container {
+    max-width: 800px;
+  }
+
   .flex-grid {
     flex-wrap: nowrap;
+    flex-direction: row-reverse;
   }
 
   .me__pic {
@@ -266,12 +293,12 @@ article {
     }
   }
 
-  .me__desc {
-    padding-left: 3%;
+  .me__pic, .me__desc {
+    margin: $--baseline * 2 + px;
   }
 
   p {
-    @include calc-font-flow(18);
+    @include calc-font-flow(20);
   }
 }
 
@@ -281,6 +308,10 @@ article {
 
 #about {
 	background-color: $purple;
+
+  .container {
+    max-width: 800px;
+  }
 
 	h2, p {
 		color: #fff;
@@ -309,7 +340,7 @@ article {
 #projects, #about {
 
 	h3 {
-		@include calc-font-flow(20);
+		@include calc-font-flow(22);
 	}
 
 	p {
@@ -321,10 +352,14 @@ article {
   h2, h3 {
     color: darken($purple, 30%);
   }
+
+  .flex-grid {
+    flex-direction: row-reverse;
+  }
 }
 
 .flex-grid {
-	margin: ($--baseline * 2 + px) 0;
+	margin: ($--baseline * 5 + px) 0;
 
 	&:first-child {
 		margin-top: 0;
@@ -336,7 +371,7 @@ article {
 
 .project__info {
 	width: 50%;
-	padding-right: ($--baseline * 2) + px;
+	padding-left: ($--baseline * 2) + px;
 }
 
 .project__window {
@@ -362,7 +397,7 @@ article {
 	height: 36px;
 	background-color: $toolbar--gray;
 	display: flex;
-	flex-wrap: no-wrap;
+	flex-wrap: nowrap;
 	flex-direction: row;
 	justify-content: left;
 	border-bottom: 1px solid darken($toolbar--gray, 5%);
@@ -396,6 +431,10 @@ article {
 
 footer {
 	background-color: darken($purple, 30%);
+
+  .container {
+    max-width: 800px;
+  }
 
 	small {
 		color: #fff;
@@ -538,18 +577,6 @@ nav {
 
 @media (max-width: 768px) {
 
-	.tinted-image {
-		margin: 0 auto;
-		height: 125px !important;
-		width: 125px !important;
-		border-radius: 125px !important;
-		background-size: 125px 125px !important;
-
-		&.pull-right {
-			float: right;
-		}
-	}
-
 	.hidden--medium {
 		display: none;
 		visibility: hidden;
@@ -566,6 +593,41 @@ nav {
 
   #me .me__desc p {
     @include calc-font-flow(16);
+  }
+
+  .me__pic, .me__desc {
+    margin: $--baseline / 2 + px;
+  }
+
+
+	article {
+		width: calc(100% - 8px);
+	}
+
+	.flex-grid {
+		display: block;
+    margin: $--baseline * 2 + px 0px;
+
+	}
+  .project__window, .project__info, footer ul {
+		width: 98%;
+	}
+  .project__window {
+    margin: 0 auto;
+  }
+	.project__info {
+		padding-left: 0;
+    padding-top: $--baseline + px;
+    padding-bottom: $--baseline + px;
+	}
+
+	#projects p, #about p {
+		@include calc-font-flow(15);
+	}
+
+  footer ul:last-child {
+    padding-top: $--baseline * 1.5 + px;
+    text-align: left;
   }
 }
 
@@ -594,18 +656,11 @@ nav {
 
 	h2 {
 		@include calc-font-flow(30);
+    padding: $--baseline + px;
 	}
 
 	h3, #projects h3 {
 		@include calc-font-flow(20);
-	}
-
-	article {
-		width: calc(100% - 8px);
-	}
-
-	.flex-grid {
-		display: block;
 	}
 
   #me {
@@ -621,22 +676,5 @@ nav {
       p { @include calc-font-flow(16); }
     }
   }
-
-	.project__window, .project__info, footer ul {
-		width: 98%;
-	}
-
-	.project__info {
-		padding-right: 0;
-	}
-
-	#projects p, #about p {
-		@include calc-font-flow(15);
-	}
-
-	footer ul:last-child {
-    padding-top: $--baseline * 1.5 + px;
-		text-align: left;
-	}
 
 }

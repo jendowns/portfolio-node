@@ -4,38 +4,21 @@ block content
 	header
 		.container
 			h1 Jen Downs
-			h2 Front end developer
-			ul.social-icons
-				li
-					a(href='https://twitter.com/jenisora', target='_blank', title='Twitter')
-						i.icon.icon-twitter(aria-hidden="true")
-						span.screen-reader jenisora on Twitter
-				li
-					a(href='https://codepen.io/jendowns', target='_blank', title='Codepen')
-						i.icon.icon-codepen(aria-hidden="true")
-						span.screen-reader jendowns on Codepen
-				li
-					a(href='https://github.com/jendowns', target='_blank', title='GitHub')
-						i.icon.icon-github(aria-hidden="true")
-						span.screen-reader jendowns on GitHub
-				li
-					a(href='https://keybase.io/jeni', target='_blank', title='Keybase.io')
-						i.icon.icon-key(aria-hidden="true")
-						span.screen-reader jeni on Keybase.io
+			h2 front end developer
 	section#me
 		.container
 			.flex-grid
 				.me__pic
 					img(src='/images/photo.jpeg', alt='A picture of Jen Downs.')
 				.me__desc.center-vertically
-					p Hey there, I'm Jen! 👋 I'm a front-end developer &amp; designer living in Austin, TX. I'm very passionate about learning new front-end technologies and using <a href="https://www.ibm.com/design/language/experience/front-end/fundamentals/">code as a design tool</a> to create compelling online experiences.
-					p You can <a href="https://twitter.com/jenisora">find me on Twitter</a>, where I mostly talk about my latest projects, my two awesome dogs, and video games. 🎮
+					p I'm a front-end developer living in Austin, TX.
+					p I use <a href="https://www.ibm.com/design/language/experience/front-end/fundamentals/">code as a design tool</a> to create compelling and useable online experiences.
 	section#projects
 		.container
 			h2 Projects
 			each project in projectEntries
 				.flex-grid
-					.project__info
+					.project__info.center-vertically
 						h3 #{project.fields.projectTitle}
 						| !{project.fields.projectInfo}
 					.project__window
@@ -91,7 +74,7 @@ block content
 		.container
 			h2 About this site
 			p I built this site using <strong>Node.js + Express</strong> with <strong>SCSS</strong> &amp; <strong>Pug</strong> templating language, and I'm using <strong>Contentful's RESTful JSON API</strong> to deliver my blog posts and project previews. Originally, I used WordPress as a CMS for this site, but I decided to refactor with a headless CMS solution because it's so flexible.
-			p <a class="button" href="https://github.com/jendowns/portfolio-node" target="_blank">View Code on Github <i class="icon-github" aria-hidden="true"></i></a>
+			p.center <a class="button" href="https://github.com/jendowns/portfolio-node" target="_blank">View Code on Github <i class="icon-github" aria-hidden="true"></i></a>
 
 
 	footer
