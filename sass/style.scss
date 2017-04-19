@@ -396,7 +396,7 @@ article {
 	overflow: hidden;
 	//box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
 	@include border-radius(6);
-	border: 2px solid darken($purple, 5%);
+	border: 2px solid $purple;
 
 	img {
 		width: 100%;
@@ -418,7 +418,7 @@ article {
 	width: 12px;
 	border-radius: 100%;
 	margin: 12px 4px;
-  background-color: darken($purple--light, 7%);
+  background-color: darken($purple--light, 5%);
   border: 2px solid $purple;
 
 	&:first-child {
