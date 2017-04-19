@@ -10,7 +10,7 @@
   color: #d9d1f0;
 }
 
-/* Red */
+/* light green */
 .hljs-variable,
 .hljs-template-variable,
 .hljs-tag,
@@ -20,10 +20,10 @@
 .hljs-regexp,
 .hljs-link,
 .hljs-meta {
-  color: #ff4b3e;
+  color: #9dd9d2;
 }
 
-/* Orange */
+/* pinkish purple */
 .hljs-number,
 .hljs-built_in,
 .hljs-builtin-name,
@@ -31,28 +31,29 @@
 .hljs-type,
 .hljs-params,
 .hljs-deletion {
-  color: #fb5012;
+  color: #c490d1;
 }
 
-/* Yellow */
+/* light blue */
 .hljs-title,
 .hljs-section,
-.hljs-attribute {
-  color: #ffb400;
+.hljs-attribute,
+.hljs-attr {
+  color: #8093f1;
 }
 
-/* Green */
+/* pink */
 .hljs-string,
 .hljs-symbol,
 .hljs-bullet,
 .hljs-addition {
-  color: #7cea9c;
+  color: #efbcd5;
 }
 
-/* Blue */
+/* light teal */
 .hljs-keyword,
 .hljs-selector-tag {
-  color: #98c1d9;
+  color: #36c9c6;
 }
 
 .hljs {

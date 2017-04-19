@@ -579,16 +579,18 @@ nav {
     border: 2px solid $purple--light;
 		padding: $--baseline * 4 + px;
 	}
+}
+code.hljs, code.hljs * {
+  font-family: $font--code;
+  letter-spacing: 0.5px;
+}
+code {
+	@include border-radius(6);
+}
 
-	code {
-		@include border-radius(6);
-    color: #fafafa;
-	}
-
-  pre {
-    margin-bottom: $--baseline + px;
-    white-space: pre-wrap;
-  }
+pre {
+  margin-bottom: $--baseline + px;
+  white-space: pre-wrap;
 }
 
 
