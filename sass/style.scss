@@ -189,6 +189,7 @@ header {
     font-style: italic;
     font-size: 34px;
     line-height: 34px;
+    padding-top: 0;
   }
 
 	ul {
@@ -225,6 +226,7 @@ header {
 
 #posts {
 	background-color: lighten($toolbar--gray, 8%);
+  background-image: url("/images/geometry.png");
 
   h2 {
     color: darken($toolbar--gray, 60%);
@@ -268,6 +270,7 @@ article {
 
 #me {
   background-color: lighten($toolbar--gray, 8%);
+  background-image: url("/images/geometry.png");
 
   .container {
     max-width: 800px;
@@ -288,8 +291,9 @@ article {
       height: auto;
       display: block;
       @include border-radius(100%);
-      border: 1px solid darken($toolbar--gray, 5%);
-      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+      //border: 1px solid darken($toolbar--gray, 5%);
+      border: 6px solid #fff;
+      //box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
     }
   }
 
@@ -297,8 +301,12 @@ article {
     margin: $--baseline * 2 + px;
   }
 
-  p {
-    @include calc-font-flow(20);
+  .me__desc span {
+    background-color: #fff;
+    padding: 1px;
+    border-bottom: 2px solid lighten($purple, 25%);
+    font-size: 20px;
+    line-height: 35px;
   }
 }
 
@@ -349,6 +357,9 @@ article {
 }
 
 #projects {
+  .container {
+    background: url('/images/geometry-heading-v1.png') no-repeat top center;
+  }
   h2, h3 {
     color: darken($purple, 30%);
   }
@@ -438,10 +449,15 @@ footer {
 
 	small {
 		color: #fff;
+
+    a {
+      font-size: inherit;
+      line-height: inherit;
+    }
 	}
 
 	ul {
-		width: 50%;
+		width: auto;
 		padding: 0;
 		margin: 0;
 		text-align: left;
@@ -676,5 +692,4 @@ nav {
       p { @include calc-font-flow(16); }
     }
   }
-
 }
