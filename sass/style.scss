@@ -396,7 +396,7 @@ article {
 	overflow: hidden;
 	//box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
 	@include border-radius(6);
-	border: 1px solid darken($toolbar--gray, 15%);
+	border: 2px solid darken($purple, 5%);
 
 	img {
 		width: 100%;
@@ -406,33 +406,26 @@ article {
 }
 .window__toolbar {
 	height: 36px;
-	background-color: lighten($toolbar--gray, 5%);
+	background-color: lighten($purple--light, 7%);
 	display: flex;
 	flex-wrap: nowrap;
 	flex-direction: row;
 	justify-content: left;
-	border-bottom: 1px solid darken($toolbar--gray, 15%);
+	border-bottom: 2px solid $purple;
 }
 .window__button {
 	height: 12px;
 	width: 12px;
 	border-radius: 100%;
 	margin: 12px 4px;
+  background-color: darken($purple--light, 7%);
+  border: 2px solid $purple;
 
 	&:first-child {
 		margin-left: 12px;
-		background-color: $button--red;
-		border: 1px solid darken($button--red, 5%);
-	}
-	&:nth-child(2) {
-		background-color: $button--yellow;
-		border: 1px solid darken($button--yellow, 5%);
-	}
-	&:nth-child(3) {
-		background-color: $button--green;
-		border: 1px solid darken($button--green, 5%);
 	}
 }
+
 
 
 /* --------------------------
