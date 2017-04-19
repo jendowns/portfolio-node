@@ -521,6 +521,9 @@ nav {
 }
 
 .single {
+  background-color: lighten($toolbar--gray, 8%);
+  background-image: url(/images/geometry.png);
+  background-size: 218px;
 
 	ol {
 		list-style-type: decimal;
@@ -542,22 +545,34 @@ nav {
 		line-height: 56px;
 		line-height: 5.6rem;
 		color: darken($purple, 30%);
+    text-align: left;
+    width: 75%;
 	}
 
 	h2 {
-		margin: ($--baseline * 2 + px) 0 ($--baseline + px) 0;
+    font-size: 30px;
+		font-size:3rem;
+		line-height: 36px;
+		line-height: 3.6rem;
+		margin: ($--baseline + px) 0 ($--baseline / 2 + px) 0;
+    color: darken($purple, 30%);
+    font-weight: 700;
+    text-align: left;
+    font-style: italic;
 	}
 	.date {
 		@include calc-font-flow(14);
 		text-transform: uppercase;
 		text-align: right;
 		color: darken($toolbar--gray, 20%);
-		font-weight: 700;
+		font-weight: 400;
 	}
 	.container {
 		max-width: 960px;
 		@include border-radius(6);
-		padding: $--baseline * 2 + px;
+    background-color: #fff;
+    border: 2px solid $purple--light;
+		padding: $--baseline * 4 + px;
 	}
 
 	img:not(.pull-right) {
@@ -581,6 +596,10 @@ nav {
 
 @media (max-width: 960px) {
 
+  .single h1 {
+    width: 100%;
+  }
+
 	article {
 		width: calc(50% - 8px);
 	}
@@ -598,9 +617,14 @@ nav {
 		border: 0;
 	}
 
-	.single .container {
-		padding: 0;
-	}
+	.single {
+    h2 {
+      padding: $--baseline + px 0px 0px 0px;
+    }
+    .container {
+  		padding: $--baseline + px;
+  	}
+  }
 
   #me .me__desc p {
     @include calc-font-flow(16);
@@ -609,7 +633,6 @@ nav {
   .me__pic, .me__desc {
     margin: $--baseline / 2 + px;
   }
-
 
 	article {
 		width: calc(100% - 8px);
@@ -659,15 +682,14 @@ nav {
 		@include calc-font-flow(16);
 	}
 
-	h1 {
-		font-size: 60px;
-		line-height: 60px;
-		line-height: 6rem;
+	h1, .single h1 {
+		font-size:48px;
+		line-height: 48px;
+		line-height: 4.8rem;
 	}
 
-	h2 {
-		@include calc-font-flow(30);
-    padding: $--baseline + px;
+	h2, .single h2 {
+		@include calc-font-flow(28);
 	}
 
 	h3, #projects h3 {
