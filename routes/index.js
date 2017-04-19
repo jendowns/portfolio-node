@@ -36,7 +36,7 @@ router.get('/', function(req, res, next) {
 		entries.blog = entries.blog.items.map(function(item){
 			var date = (item.fields.datePublished).split('-');
 			var months = ['', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-			item.fields.datePublished = months[date[1]] + ' ' + date[2].replace(/(^|-)0+/g, "$1") + ', ' + date[0];
+			item.fields.datePublished = months[date[1].replace(/(^|-)0+/g, "$1")]  + ' ' + date[2].replace(/(^|-)0+/g, "$1") + ', ' + date[0];
 			return item;
 		});
 
@@ -82,7 +82,7 @@ router.get('/:slug', function(req, res, next) {
 
 		var date = (entry.fields.datePublished).split('-');
 		var months = ['', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-		date = months[date[1]] + ' ' + date[2].replace(/(^|-)0+/g, "$1") + ', ' + date[0];
+		date = months[date[1].replace(/(^|-)0+/g, "$1")] + ' ' + date[2].replace(/(^|-)0+/g, "$1") + ', ' + date[0];
 
 		res.render('single', { title: entry.fields.title, body: body, date: date });
 	})

@@ -525,6 +525,11 @@ nav {
   background-image: url(/images/geometry.png);
   background-size: 218px;
 
+  .project__window {
+    width: 75%;
+    margin: $--baseline * 2 + px auto;
+  }
+
 	ol {
 		list-style-type: decimal;
 		padding: 0 ($--baseline * 2 + px);
@@ -575,18 +580,15 @@ nav {
 		padding: $--baseline * 4 + px;
 	}
 
-	img:not(.pull-right) {
-		border: 1px solid $toolbar--gray;
-		@include border-radius(6);
-		width: 90%;
-		max-width: 600px;
-		display: block;
-		margin: 0 auto;
-	}
-
 	code {
 		@include border-radius(6);
+    color: #fafafa;
 	}
+
+  pre {
+    margin-bottom: $--baseline + px;
+    white-space: pre-wrap;
+  }
 }
 
 
@@ -643,6 +645,10 @@ nav {
     margin: $--baseline * 2 + px 0px;
 
 	}
+  .project__window {
+    width: 95%;
+    margin: $--baseline + px;
+  }
   .project__window, .project__info, footer ul {
 		width: 98%;
 	}
