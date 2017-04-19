@@ -229,7 +229,7 @@ header {
   background-image: url("/images/geometry.png");
 
   h2 {
-    color: darken($toolbar--gray, 60%);
+    color: darken($purple, 30%);
   }
   h3 {
   	color: darken($toolbar--gray, 60%);
@@ -241,7 +241,7 @@ article {
 	width: calc(33.33333% - 8px);
 	background-color: #fff;
 	margin: 0px 0px ($--baseline + px) 0px;
-	border: 1px solid $toolbar--gray;
+	border: 2px solid $purple--light;
 	padding: $--baseline + px;
 	@include border-radius(6);
 
@@ -394,9 +394,9 @@ article {
 	flex-wrap: wrap;
 	flex-direction: column;
 	overflow: hidden;
-	box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+	//box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
 	@include border-radius(6);
-	border: 1px solid darken($toolbar--gray, 5%);
+	border: 1px solid darken($toolbar--gray, 15%);
 
 	img {
 		width: 100%;
@@ -406,12 +406,12 @@ article {
 }
 .window__toolbar {
 	height: 36px;
-	background-color: $toolbar--gray;
+	background-color: lighten($toolbar--gray, 5%);
 	display: flex;
 	flex-wrap: nowrap;
 	flex-direction: row;
 	justify-content: left;
-	border-bottom: 1px solid darken($toolbar--gray, 5%);
+	border-bottom: 1px solid darken($toolbar--gray, 15%);
 }
 .window__button {
 	height: 12px;
@@ -433,7 +433,6 @@ article {
 		border: 1px solid darken($button--green, 5%);
 	}
 }
-
 
 
 /* --------------------------
