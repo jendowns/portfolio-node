@@ -396,7 +396,7 @@ article {
 	overflow: hidden;
 	//box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
 	@include border-radius(6);
-	border: 2px solid $purple;
+	border: 2px solid lighten($purple, 7%);
 
 	img {
 		width: 100%;
@@ -411,7 +411,7 @@ article {
 	flex-wrap: nowrap;
 	flex-direction: row;
 	justify-content: left;
-	border-bottom: 2px solid $purple;
+	border-bottom: 2px solid lighten($purple, 7%);
 }
 .window__button {
 	height: 12px;
@@ -419,7 +419,7 @@ article {
 	border-radius: 100%;
 	margin: 12px 4px;
   background-color: darken($purple--light, 5%);
-  border: 2px solid $purple;
+  border: 2px solid lighten($purple, 7%);
 
 	&:first-child {
 		margin-left: 12px;
