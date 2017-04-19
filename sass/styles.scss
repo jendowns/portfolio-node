@@ -226,7 +226,8 @@ header {
 
 #posts {
 	background-color: lighten($toolbar--gray, 8%);
-  background-image: url("/images/geometry.png");
+  background-image: url(/images/geometry.png);
+  background-size: 218px;
 
   h2 {
     color: darken($purple, 30%);
@@ -270,7 +271,8 @@ article {
 
 #me {
   background-color: lighten($toolbar--gray, 8%);
-  background-image: url("/images/geometry.png");
+  background-image: url(/images/geometry.png);
+  background-size: 218px;
 
   .container {
     max-width: 800px;
@@ -359,6 +361,7 @@ article {
 #projects {
   .container {
     background: url('/images/geometry-heading-v1.png') no-repeat top center;
+    background-size: 246px;
   }
   h2, h3 {
     color: darken($purple, 30%);
