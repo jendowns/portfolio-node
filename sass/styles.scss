@@ -305,10 +305,10 @@ article {
 
   .me__desc span {
     background-color: #fff;
-    padding: 1px;
-    border-bottom: 2px solid lighten($purple, 25%);
+    padding: 2px;
+    border-bottom: 3px solid lighten($purple, 25%);
     font-size: 20px;
-    line-height: 35px;
+    line-height: 38px;
   }
 }
 
@@ -439,7 +439,7 @@ footer {
 	background-color: darken($purple, 30%);
 
   .container {
-    max-width: 800px;
+    max-width: 960px;
   }
 
 	small {
@@ -516,6 +516,7 @@ nav {
 
 	a:hover, a:focus {
 		color: darken($purple, 30%);
+    border-color: darken($purple, 30%);
 		text-decoration: none;
 	}
 }
