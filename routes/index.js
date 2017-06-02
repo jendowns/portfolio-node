@@ -6,7 +6,7 @@ require('dotenv').config();
 
 /* Redirects for external articles */
 router.get('/wordpress-sidebar', function(req, res) {
-	res.redirect('http://wearemammoth.com/2016/10/wordpress-tutorial-generating-sidebar-categories-posts');
+	res.redirect('https://medium.com/we-are-mammoth/creating-a-sidebar-of-categories-and-posts-in-wordpress-8e5f45e3f4f8');
 });
 router.get('/unity-arcade-game', function(req, res) {
 	res.redirect('https://recompilermag.com/issues/issue-3/creating-a-2d-arcade-game-with-javascript-in-unity-5/');
