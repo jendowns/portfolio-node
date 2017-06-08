@@ -305,10 +305,12 @@ article {
 
   .me__desc span {
     background-color: #fff;
-    padding: 2px;
-    border-bottom: 3px solid lighten($purple, 25%);
     font-size: 20px;
-    line-height: 38px;
+    line-height: 32px;
+    padding: 5px;
+    padding: 0.5rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
   }
 }
 
