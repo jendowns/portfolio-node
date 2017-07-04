@@ -65,8 +65,8 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size: 72px;
-	line-height: 75px;
+	font-size: 80px;
+	line-height: 85px;
 	line-height: 9rem;
 	font-family: $font--title;
 	font-weight: 700;
@@ -180,6 +180,7 @@ em {
 
 header {
 	background-color: $purple;
+  text-align: center;
 
 	h1, h2 {
 		color: #fff;
@@ -211,7 +212,7 @@ header {
 
 	li a {
 		color: #fff;
-		@include calc-font-flow(24);
+		@include calc-font-flow(30);
 
 		&:hover, &:focus {
 			color: darken($purple, 30%);
@@ -275,32 +276,38 @@ article {
   background-size: 218px;
 
   .container {
-    max-width: 800px;
+    max-width: 550px;
   }
 
   .flex-grid {
     flex-wrap: nowrap;
-    flex-direction: row-reverse;
+    flex-direction: column;
   }
 
   .me__pic {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     flex-shrink: 0;
+    margin: 0 auto;
 
     img {
       width: 100%;
       height: auto;
       display: block;
       @include border-radius(100%);
+      background-color: #fefefe;
       //border: 1px solid darken($toolbar--gray, 5%);
-      border: 6px solid #fff;
+      // border: 6px solid #fff;
       //box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
     }
   }
 
-  .me__pic, .me__desc {
+  .me__desc {
     margin: $--baseline * 2 + px;
+  }
+
+  .me__desc p {
+    text-align: center;
   }
 
   .me__desc span {
@@ -485,8 +492,9 @@ footer {
 	a {
 		@include calc-font-flow(24);
 		color: #fff;
+    border: 0;
 
-		&:hover, &:focus {
+		&:hover, &:focus, &:active {
 			border: 0;
 			color: $purple;
 		}
