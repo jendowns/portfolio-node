@@ -6,17 +6,17 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "body-parser": "~1.17.1",
+    "body-parser": "^1.17.2",
     "compression": "^1.6.2",
-    "contentful": "^3.8.0",
+    "contentful": "^3.8.1",
     "cookie-parser": "~1.4.3",
-    "debug": "~2.3.3",
+    "debug": "^2.3.3",
     "dotenv": "^4.0.0",
-    "express": "~4.15.2",
+    "express": "^4.15.3",
     "marked": "https://github.com/jendowns/marked",
     "morgan": "~1.8.2",
-    "node-sass-middleware": "~0.10.0",
-    "pug": "^2.0.0-beta6",
+    "node-sass-middleware": "^0.10.1",
+    "pug": "^2.0.0-rc.2",
     "serve-favicon": "~2.3.0"
   },
   "engines": {
