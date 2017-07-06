@@ -13,8 +13,8 @@
     "debug": "~2.3.3",
     "dotenv": "^4.0.0",
     "express": "~4.15.2",
-    "marked": "^0.3.6",
-    "morgan": "~1.7.0",
+    "marked": "https://github.com/jendowns/marked",
+    "morgan": "~1.8.2",
     "node-sass-middleware": "~0.10.0",
     "pug": "^2.0.0-beta6",
     "serve-favicon": "~2.3.0"
