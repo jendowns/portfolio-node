@@ -20,7 +20,7 @@ block content
 			.flex-grid
 				ul
 					li
-						small &copy; 2017 Jen Downs. 
+						small#copyright &copy; Jen Downs. 
 					li
 						small Made with 
 							i.icon.icon-heart
@@ -46,6 +46,9 @@ block content
 
 	script(type='text/javascript', src='js/highlight.pack.js')
 	script(type='text/javascript').
+		var today = new Date();
+		var year = today.getFullYear();
+		document.getElementById("copyright").innerHTML = "&copy; "+year+" Jen Downs.";
 		console.log();
 		console.log("%c💁🏻 Hello there!", "color: #8971d0; font-size: 14px;font-weight: 700; padding: 4px; border: 2px solid #8971d0;");
 		console.log();

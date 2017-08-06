@@ -26,23 +26,22 @@ block content
 		.container
 			.flex-grid
 				.me__desc
-					p <span>I'm a front end developer living in Austin, TX. ☀️ </span>
-					p <span>I use <a href="https://www.ibm.com/design/language/experience/front-end/fundamentals/">code as a design tool</a> ✨ to create compelling online experiences.</span>
+					p <span>Hello there! 👋 </span>
+					p <span>I'm a front end developer in Austin, TX. ☀️ </span>
+					p <span>I use <a href="https://www.ibm.com/design/language/experience/front-end/fundamentals/">code as a design tool</a> ✨ to create compelling &amp; delightful digital experiences. 💖</span>
 	section#projects
 		.container
 			h2 Projects
-			each project in projectEntries
-				.flex-grid
-					.project__info.center-vertically
-						h3 #{project.fields.projectTitle}
-						| !{project.fields.projectInfo}
+			.grid
+				each project in projectEntries
 					.project__window
 						.window__wrapper
 							.window__toolbar
 								.window__button
 								.window__button
 								.window__button
-							img(src=project.fields.projectPreview.fields.file.url, alt="Screenshot of the project website.")
+							.window__pic(style="background-image: url("+project.fields.projectPreview.fields.file.url+"); background-size: cover; background-position: top left;")
+								span.screen-reader Screenshot of !{project.fields.projectTitle} website.
 
 	section#posts
 		.container
@@ -97,9 +96,12 @@ block content
 			.flex-grid
 				ul
 					li
-						small &copy; 2017 Jen Downs.
+						small#copyright &copy; Jen Downs 
 					li
-						small Portrait by <a href='https://twitter.com/imSoojin_art' target='_blank'>Soojin Lim</a>
+						small Made with 
+							i.icon.icon-heart
+							span.screen-reader love 
+							|  in Austin, TX.
 
 				ul.social-icons
 					li
@@ -120,6 +122,9 @@ block content
 							span.screen-reader jeni on Keybase.io
 
 	script(type='text/javascript').
+		var today = new Date();
+		var year = today.getFullYear();
+		document.getElementById("copyright").innerHTML = "&copy; "+year+" Jen Downs.";
 		console.log();
 		console.log("%c💁🏻 Hello there!", "color: #8971d0; font-size: 14px;font-weight: 700; padding: 4px; border: 2px solid #8971d0;");
 		console.log();
