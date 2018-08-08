@@ -2,7 +2,24 @@
 version: v1.12.0
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
-patch:
+patch
   'npm:tunnel-agent:20170305':
     - node-sass-middleware > node-sass > request > tunnel-agent:
         patched: '2018-06-28T07:47:02.627Z'
+  'npm:hoek:20180212':
+    - node-sass-middleware > node-sass > request > hawk > hoek:
+        patched: '2018-06-21T07:45:30.544Z'
+    - node-sass-middleware > node-sass > request > hawk > boom > hoek:
+        patched: '2018-06-21T07:45:30.544Z'
+    - node-sass-middleware > node-sass > request > hawk > sntp > hoek:
+        patched: '2018-06-21T07:45:30.544Z'
+    - node-sass-middleware > node-sass > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-06-21T07:45:30.544Z'
+    - node-sass-middleware > node-sass > node-gyp > request > hawk > hoek:
+        patched: '2018-06-21T07:45:30.544Z'
+    - node-sass-middleware > node-sass > node-gyp > request > hawk > boom > hoek:
+        patched: '2018-06-21T07:45:30.544Z'
+    - node-sass-middleware > node-sass > node-gyp > request > hawk > sntp > hoek:
+        patched: '2018-06-21T07:45:30.544Z'
+    - node-sass-middleware > node-sass > node-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-06-21T07:45:30.544Z'
