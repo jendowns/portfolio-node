@@ -20,7 +20,7 @@
     "node-sass-middleware": "^0.10.1",
     "pug": "^2.0.0-rc.2",
     "serve-favicon": "^2.4.3",
-    "snyk": "^1.83.0"
+    "snyk": "^1.85.0"
   },
   "engines": {
     "node": "8.1.4",
